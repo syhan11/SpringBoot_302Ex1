@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org>"
+<head>
+    <meta charset="UTF-8">
+    <title>ToDos</title>
+</head>
+<body>
+    <a href="/addtodo"> Add a Task</a><br />
+    <div th:each="todo : ${todo}">
+         <h4 th:inline="text"> [[${todo.taskName}]] is due [[${todo.dueDate}]] and it has priority [[${todo.priority}]]</h4>
+    </div>
+</body>
+</html>
