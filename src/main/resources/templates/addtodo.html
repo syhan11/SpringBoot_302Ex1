@@ -7,7 +7,7 @@
 <body>
     <form action="#"
         th:action="@{/process}"
-        th:object="{todo}"
+        th:object="${todo}"
         method="post">
         Task Name:<input type="text" th:field="*{taskName}" />
         <span th:if="${#fields.hasErrors('taskName')}"
@@ -15,11 +15,11 @@
 
         Due Date:<input type="text" th:field="*{dueDate}" />
         <span th:if="${#fields.hasErrors('dueDate')}"
-              th:errors="*{dueDate}"></span>
+              th:errors="*{dueDate}"></span> <br />
 
         Priority:<input type="number" th:field="*{priority}" />
         <span th:if="${#fields.hasErrors('priority')}"
-              th:errors="*{priority}"></span>
+              th:errors="*{priority}"></span> <br /><br />
         <input type="submit" value="Submit">
     </form>
 </body>

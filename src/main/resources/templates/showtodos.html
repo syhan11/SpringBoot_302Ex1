@@ -5,7 +5,7 @@
     <title>ToDos</title>
 </head>
 <body>
-    <a href="/addtodo"> Add a Task</a><br />
+    <a href="/add"> Add a Task</a><br />
     <div th:each="todo : ${todo}">
          <h4 th:inline="text"> [[${todo.taskName}]] is due [[${todo.dueDate}]] and it has priority [[${todo.priority}]]</h4>
     </div>
